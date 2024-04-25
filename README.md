@@ -9,6 +9,10 @@ Following is the implementation details
     1. Validate account ids are valid and present else return error response
     2. Validate account has sufficient balance to perform required transaction
     3. Perform transaction synchronously using synchronized methods for therad safety
+  
+To make this code production ready it need to connect database to store the account details in database.
+To handle data consistency in database besides synchronized methods we can make use of @Transacinal annotation 
+feature to mark data base transaction and we can perform operation in isolation to avoid data inconsistency.
 
 Create account service
 v1/accounts
